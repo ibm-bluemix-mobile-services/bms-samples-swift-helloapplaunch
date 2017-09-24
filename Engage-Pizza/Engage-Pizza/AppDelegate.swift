@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Engage
+import AppLaunch
 
 
 @UIApplicationMain
@@ -18,27 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+ 
+        AppLaunch.sharedInstance.initializeWithAppGUID(applicationId: "cb4baa34-e75e-4567-9fd2-0fdf37573c0f", clientSecret: "6d8267ee-9e1e-47ec-b622-33d36704d1e8", region: US_SOUTH)
         
-        
-        
-        
-        
-        
-//        Engage.sharedInstance.updateUserWith(userId: "chethan", attribute: "customerType", value: "premium") { (response, status, error) in
-//            if(status == 201){
-//                print("user updated")
-//            }
-//        }
-        
-        
-//
-//        Engage.sharedInstance.getAppThemeConfig { (response, status, error) in
-//            if(response != nil){
-//
-//                ThemeViewController().renderTheme(response!)
-//            }
-//        }
-        
+        AppLaunch.sharedInstance.registerWith(userId: "chethan") { (registrationResponse, registrationStatus, registrationError) in
+            if(registrationStatus == 201){
+                print("User is registered : \(registrationResponse)")
+                
+                AppLaunch.sharedInstance.actions(completionHandler: { (features, actionsStatus, actionsError) in
+                    if(actionsStatus == 200){
+                        print("Got Client Actions")
+                    }
+                })
+            }
+        }
         
         return true
     }
@@ -46,31 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillResignActive(_ application: UIApplication) {
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
 
     func applicationDidEnterBackground(_ application: UIApplication) {
        

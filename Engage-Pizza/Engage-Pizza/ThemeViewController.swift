@@ -12,7 +12,7 @@ import UIKit
 class ThemeViewController: UIViewController {
     
     
-    func renderTheme(_ response:[String:Any]) -> Void{
+    @objc func renderTheme(_ response:[String:Any]) -> Void{
         
     }
 }

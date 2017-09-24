@@ -11,7 +11,7 @@ import UIKit
 
 class CheckoutViewController : UIViewController{
     
-    func enableTouchId(_ response: [[String:Any]]) -> Void{
+    @objc func enableTouchId(_ response: [[String:Any]]) -> Void{
         
     }
 }

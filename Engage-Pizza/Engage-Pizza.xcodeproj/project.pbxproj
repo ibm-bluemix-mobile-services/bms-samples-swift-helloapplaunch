@@ -19,23 +19,23 @@
 		488D7D7F1E7A7AE000A182E4 /* Prize-Icon-Pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D7E1E7A7AE000A182E4 /* Prize-Icon-Pizza.png */; };
 		488D7D811E7A7C6D00A182E4 /* Broccoli-Free-PNG-Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D801E7A7C6D00A182E4 /* Broccoli-Free-PNG-Image.png */; };
 		488D7D831E7A7CB600A182E4 /* bell-peppers.png in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D821E7A7CB600A182E4 /* bell-peppers.png */; };
-		488D7D841E7A7D5500A182E4 /* Engage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488D7D7C1E7A799000A182E4 /* Engage.framework */; };
-		488D7D851E7A7D5500A182E4 /* Engage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 488D7D7C1E7A799000A182E4 /* Engage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		488D7D881E7AA0B000A182E4 /* pizza4.png in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D871E7AA0B000A182E4 /* pizza4.png */; };
 		488D7D8C1E7B03EC00A182E4 /* pizza-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D8B1E7B03EC00A182E4 /* pizza-3.png */; };
 		488D7D8E1E7B04B100A182E4 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488D7D8D1E7B04B100A182E4 /* CheckoutViewController.swift */; };
 		488D7D901E7B06ED00A182E4 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488D7D8F1E7B06ED00A182E4 /* ThemeViewController.swift */; };
+		489F9BFD1F7684E400B4D1B8 /* AppLaunch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480BF7AE1F76713700C70D6C /* AppLaunch.framework */; };
+		489F9BFE1F7684E400B4D1B8 /* AppLaunch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 480BF7AE1F76713700C70D6C /* AppLaunch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF1EDB305900EC435F65F97C /* Pods_Engage_Pizza.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A98B2424CB50482119F20AB /* Pods_Engage_Pizza.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		488D7D861E7A7D5500A182E4 /* Embed Frameworks */ = {
+		489F9BFF1F7684E400B4D1B8 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				488D7D851E7A7D5500A182E4 /* Engage.framework in Embed Frameworks */,
+				489F9BFE1F7684E400B4D1B8 /* AppLaunch.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		480BF7AE1F76713700C70D6C /* AppLaunch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppLaunch.framework; sourceTree = "<group>"; };
 		48385C2A1F36213E00DF1CBD /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
 		488D7D601E7A787700A182E4 /* Engage-Pizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Engage-Pizza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		488D7D631E7A787700A182E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		488D7D751E7A788800A182E4 /* pizza-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pizza-icon.png"; sourceTree = "<group>"; };
 		488D7D761E7A788800A182E4 /* pizza1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza1.png; sourceTree = "<group>"; };
 		488D7D771E7A788800A182E4 /* pizza2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza2.png; sourceTree = "<group>"; };
-		488D7D7C1E7A799000A182E4 /* Engage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Engage.framework; sourceTree = "<group>"; };
 		488D7D7E1E7A7AE000A182E4 /* Prize-Icon-Pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Prize-Icon-Pizza.png"; sourceTree = "<group>"; };
 		488D7D801E7A7C6D00A182E4 /* Broccoli-Free-PNG-Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Broccoli-Free-PNG-Image.png"; sourceTree = "<group>"; };
 		488D7D821E7A7CB600A182E4 /* bell-peppers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bell-peppers.png"; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF1EDB305900EC435F65F97C /* Pods_Engage_Pizza.framework in Frameworks */,
-				488D7D841E7A7D5500A182E4 /* Engage.framework in Frameworks */,
+				489F9BFD1F7684E400B4D1B8 /* AppLaunch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 		488D7D571E7A787700A182E4 = {
 			isa = PBXGroup;
 			children = (
-				488D7D7C1E7A799000A182E4 /* Engage.framework */,
+				480BF7AE1F76713700C70D6C /* AppLaunch.framework */,
 				488D7D621E7A787700A182E4 /* Engage-Pizza */,
 				488D7D611E7A787700A182E4 /* Products */,
 				C4C390760BEDE8AC69F6130A /* Pods */,
@@ -177,7 +177,7 @@
 				488D7D5E1E7A787700A182E4 /* Resources */,
 				5D3BCBB6B7DA7AE13AC4B151 /* [CP] Embed Pods Frameworks */,
 				5D56605A07565D2181116A12 /* [CP] Copy Pods Resources */,
-				488D7D861E7A7D5500A182E4 /* Embed Frameworks */,
+				489F9BFF1F7684E400B4D1B8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,6 +200,7 @@
 				TargetAttributes = {
 					488D7D5F1E7A787700A182E4 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -250,9 +251,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Engage-Pizza/Pods-Engage-Pizza-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI/BMSAnalyticsAPI.framework",
+				"${BUILT_PRODUCTS_DIR}/BMSCore/BMSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/BMSPush/BMSPush.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSPush.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -280,13 +290,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Engage-Pizza-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -430,7 +443,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wlindia.Engage-Pizza";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -447,7 +460,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wlindia.Engage-Pizza";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
