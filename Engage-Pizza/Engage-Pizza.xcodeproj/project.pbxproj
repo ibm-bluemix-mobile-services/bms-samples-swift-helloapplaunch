@@ -23,8 +23,6 @@
 		488D7D8C1E7B03EC00A182E4 /* pizza-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D8B1E7B03EC00A182E4 /* pizza-3.png */; };
 		488D7D8E1E7B04B100A182E4 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488D7D8D1E7B04B100A182E4 /* CheckoutViewController.swift */; };
 		488D7D901E7B06ED00A182E4 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488D7D8F1E7B06ED00A182E4 /* ThemeViewController.swift */; };
-		489F9BFD1F7684E400B4D1B8 /* AppLaunch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480BF7AE1F76713700C70D6C /* AppLaunch.framework */; };
-		489F9BFE1F7684E400B4D1B8 /* AppLaunch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 480BF7AE1F76713700C70D6C /* AppLaunch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF1EDB305900EC435F65F97C /* Pods_Engage_Pizza.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A98B2424CB50482119F20AB /* Pods_Engage_Pizza.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +33,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				489F9BFE1F7684E400B4D1B8 /* AppLaunch.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,7 +40,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		480BF7AE1F76713700C70D6C /* AppLaunch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppLaunch.framework; sourceTree = "<group>"; };
 		48385C2A1F36213E00DF1CBD /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
 		488D7D601E7A787700A182E4 /* Engage-Pizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Engage-Pizza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		488D7D631E7A787700A182E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +69,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF1EDB305900EC435F65F97C /* Pods_Engage_Pizza.framework in Frameworks */,
-				489F9BFD1F7684E400B4D1B8 /* AppLaunch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +78,6 @@
 		488D7D571E7A787700A182E4 = {
 			isa = PBXGroup;
 			children = (
-				480BF7AE1F76713700C70D6C /* AppLaunch.framework */,
 				488D7D621E7A787700A182E4 /* Engage-Pizza */,
 				488D7D611E7A787700A182E4 /* Products */,
 				C4C390760BEDE8AC69F6130A /* Pods */,
@@ -299,7 +293,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
