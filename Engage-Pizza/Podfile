@@ -3,7 +3,8 @@
 
 target 'Engage-Pizza' do
     use_frameworks!
-    platform :ios, '8.0'
+    platform :ios, '9.0'
+    pod 'IBMAppLaunch'
     pod 'BMSCore', '~> 2.0'
     pod 'BMSPush','~> 2.0.3'
     pod 'SwiftyJSON'
