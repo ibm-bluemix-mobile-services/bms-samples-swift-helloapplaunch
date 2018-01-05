@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import IBMAppLaunch
 import LocalAuthentication
+import IBMAppLaunch
 
 
 class ViewController: UIViewController {
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         
         if(AppLaunch.sharedInstance.hasFeatureWith(code: "_1o2xw6uds")){
 
-            let label:String = AppLaunch.sharedInstance.getValueFor(featureWithCode: "_1o2xw6uds", variableWithCode: "_2zyawutfc")
+            let label:String = AppLaunch.sharedInstance.getValueFor(featureWithCode: "_1o2xw6uds", propertyWithCode: "_2zyawutfc")
 
             DispatchQueue.main.async() {
                 self.touchIdButton.isHidden = false
@@ -34,7 +34,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchid(_ sender: Any) {
-        AppLaunch.sharedInstance.sendMetricsWith(code: "_w6ll8y166")
+        var metriccodes = [String]()
+        metriccodes.append("_w6ll8y166")
+        AppLaunch.sharedInstance.sendMetricsWith(codes: metriccodes)
         
     }
     
