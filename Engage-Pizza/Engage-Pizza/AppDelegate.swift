@@ -18,18 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        let config =   AppLaunchConfig.Builder().cacheExpiration(30).eventFlushInterval(60).fetchPolicy(.REFRESH_ON_EXPIRY).build()
+        let user = AppLaunchUser.Builder(userId: "vittal").custom(key: "mail", value: "vittalpai@ymail.com").build()
  
-        AppLaunch.sharedInstance.initializeWithAppGUID(applicationId: "cb4baa34-e75e-4567-9fd2-0fdf37573c0f", clientSecret: "6d8267ee-9e1e-47ec-b622-33d36704d1e8", region: US_SOUTH)
-        
-        AppLaunch.sharedInstance.registerWith(userId: "chethan") { (registrationResponse, registrationStatus, registrationError) in
-            if(registrationStatus == 201){
-                print("User is registered : \(registrationResponse)")
-                
-                AppLaunch.sharedInstance.actions(completionHandler: { (features, actionsStatus, actionsError) in
-                    if(actionsStatus == 200){
-                        print("Got Client Actions")
-                    }
-                })
+        AppLaunch.sharedInstance.initialize(region: .US_SOUTH_STAGING, appId: "852301c1-128e-4b11-80f5-9d113cdb976f", clientSecret: "ecf53cdf-40ca-4239-9c49-15cdd88a36e7", config: config, user: user) { (Success, Failure) in
+            if(Success != nil ){
+                print("Initialization Successful")
+            } else {
+                print("Initialization Failed")
             }
         }
         
