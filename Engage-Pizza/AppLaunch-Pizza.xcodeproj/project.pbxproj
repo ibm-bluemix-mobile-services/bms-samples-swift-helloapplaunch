@@ -41,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		48385C2A1F36213E00DF1CBD /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
-		488D7D601E7A787700A182E4 /* Engage-Pizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Engage-Pizza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		488D7D601E7A787700A182E4 /* AppLaunch-Pizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppLaunch-Pizza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		488D7D631E7A787700A182E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		488D7D651E7A787700A182E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		488D7D681E7A787700A182E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		488D7D571E7A787700A182E4 = {
 			isa = PBXGroup;
 			children = (
-				488D7D621E7A787700A182E4 /* Engage-Pizza */,
+				488D7D621E7A787700A182E4 /* AppLaunch-Pizza */,
 				488D7D611E7A787700A182E4 /* Products */,
 				C4C390760BEDE8AC69F6130A /* Pods */,
 				EA590C58167B4EE37F801FA2 /* Frameworks */,
@@ -88,12 +88,12 @@
 		488D7D611E7A787700A182E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				488D7D601E7A787700A182E4 /* Engage-Pizza.app */,
+				488D7D601E7A787700A182E4 /* AppLaunch-Pizza.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		488D7D621E7A787700A182E4 /* Engage-Pizza */ = {
+		488D7D621E7A787700A182E4 /* AppLaunch-Pizza */ = {
 			isa = PBXGroup;
 			children = (
 				488D7D8A1E7B014900A182E4 /* Models */,
@@ -107,7 +107,7 @@
 				488D7D6C1E7A787700A182E4 /* LaunchScreen.storyboard */,
 				488D7D6F1E7A787700A182E4 /* Info.plist */,
 			);
-			path = "Engage-Pizza";
+			path = "AppLaunch-Pizza";
 			sourceTree = "<group>";
 		};
 		488D7D7B1E7A788D00A182E4 /* images */ = {
@@ -161,9 +161,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		488D7D5F1E7A787700A182E4 /* Engage-Pizza */ = {
+		488D7D5F1E7A787700A182E4 /* AppLaunch-Pizza */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 488D7D721E7A787700A182E4 /* Build configuration list for PBXNativeTarget "Engage-Pizza" */;
+			buildConfigurationList = 488D7D721E7A787700A182E4 /* Build configuration list for PBXNativeTarget "AppLaunch-Pizza" */;
 			buildPhases = (
 				D4818C195EBEEE7C2CB3D4EA /* [CP] Check Pods Manifest.lock */,
 				488D7D5C1E7A787700A182E4 /* Sources */,
@@ -177,9 +177,9 @@
 			);
 			dependencies = (
 			);
-			name = "Engage-Pizza";
+			name = "AppLaunch-Pizza";
 			productName = "Engage-Pizza";
-			productReference = 488D7D601E7A787700A182E4 /* Engage-Pizza.app */;
+			productReference = 488D7D601E7A787700A182E4 /* AppLaunch-Pizza.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -212,7 +212,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				488D7D5F1E7A787700A182E4 /* Engage-Pizza */,
+				488D7D5F1E7A787700A182E4 /* AppLaunch-Pizza */,
 			);
 		};
 /* End PBXProject section */
@@ -249,6 +249,7 @@
 				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI/BMSAnalyticsAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/BMSCore/BMSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/BMSPush/BMSPush.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMAppLaunch/IBMAppLaunch.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -256,6 +257,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSPush.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBMAppLaunch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +295,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -470,7 +472,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		488D7D721E7A787700A182E4 /* Build configuration list for PBXNativeTarget "Engage-Pizza" */ = {
+		488D7D721E7A787700A182E4 /* Build configuration list for PBXNativeTarget "AppLaunch-Pizza" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				488D7D731E7A787700A182E4 /* Debug */,

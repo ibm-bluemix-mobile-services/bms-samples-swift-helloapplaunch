@@ -22,9 +22,9 @@ class ViewController: UIViewController {
        
         super.viewDidAppear(animated)
         
-        if(AppLaunch.sharedInstance.hasFeatureWith(code: "_1o2xw6uds")){
+        if(AppLaunch.sharedInstance.isFeatureEnabled(featureCode: "_1o2xw6uds")){
 
-            let label:String = AppLaunch.sharedInstance.getValueFor(featureWithCode: "_1o2xw6uds", propertyWithCode: "_2zyawutfc")
+            let label:String = AppLaunch.sharedInstance.getPropertyofFeature(featureCode: "_1o2xw6uds", propertyCode: "_2zyawutfc")
 
             DispatchQueue.main.async() {
                 self.touchIdButton.isHidden = false
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     @IBAction func touchid(_ sender: Any) {
         var metriccodes = [String]()
         metriccodes.append("_w6ll8y166")
-        AppLaunch.sharedInstance.sendMetricsWith(codes: metriccodes)
+        AppLaunch.sharedInstance.sendMetrics(codes: metriccodes)
         
     }
     
