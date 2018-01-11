@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4308FA69AD6A1F632F527DF9 /* Pods_AppLaunch_Pizza.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDD483C598D59A786F1FF51 /* Pods_AppLaunch_Pizza.framework */; };
+		48385C2B1F36213E00DF1CBD /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48385C2A1F36213E00DF1CBD /* FirstController.swift */; };
+		488D7D641E7A787700A182E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488D7D631E7A787700A182E4 /* AppDelegate.swift */; };
+		488D7D661E7A787700A182E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488D7D651E7A787700A182E4 /* ViewController.swift */; };
+		488D7D691E7A787700A182E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D671E7A787700A182E4 /* Main.storyboard */; };
+		488D7D6B1E7A787700A182E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D6A1E7A787700A182E4 /* Assets.xcassets */; };
+		488D7D6E1E7A787700A182E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D6C1E7A787700A182E4 /* LaunchScreen.storyboard */; };
+		488D7D781E7A788800A182E4 /* pizza-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D751E7A788800A182E4 /* pizza-icon.png */; };
+		488D7D791E7A788800A182E4 /* pizza1.png in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D761E7A788800A182E4 /* pizza1.png */; };
+		488D7D7A1E7A788800A182E4 /* pizza2.png in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D771E7A788800A182E4 /* pizza2.png */; };
+		488D7D7F1E7A7AE000A182E4 /* Prize-Icon-Pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D7E1E7A7AE000A182E4 /* Prize-Icon-Pizza.png */; };
+		488D7D811E7A7C6D00A182E4 /* Broccoli-Free-PNG-Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D801E7A7C6D00A182E4 /* Broccoli-Free-PNG-Image.png */; };
+		488D7D831E7A7CB600A182E4 /* bell-peppers.png in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D821E7A7CB600A182E4 /* bell-peppers.png */; };
+		488D7D881E7AA0B000A182E4 /* pizza4.png in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D871E7AA0B000A182E4 /* pizza4.png */; };
+		488D7D8C1E7B03EC00A182E4 /* pizza-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 488D7D8B1E7B03EC00A182E4 /* pizza-3.png */; };
+		488D7D8E1E7B04B100A182E4 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488D7D8D1E7B04B100A182E4 /* CheckoutViewController.swift */; };
+		488D7D901E7B06ED00A182E4 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488D7D8F1E7B06ED00A182E4 /* ThemeViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		489F9BFF1F7684E400B4D1B8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01EA683F6EA15CCCE4512F86 /* Pods-AppLaunch-Pizza.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLaunch-Pizza.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppLaunch-Pizza/Pods-AppLaunch-Pizza.release.xcconfig"; sourceTree = "<group>"; };
+		48385C2A1F36213E00DF1CBD /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
+		488D7D601E7A787700A182E4 /* AppLaunch-Pizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppLaunch-Pizza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		488D7D631E7A787700A182E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		488D7D651E7A787700A182E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		488D7D681E7A787700A182E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		488D7D6A1E7A787700A182E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		488D7D6D1E7A787700A182E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		488D7D6F1E7A787700A182E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		488D7D751E7A788800A182E4 /* pizza-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pizza-icon.png"; sourceTree = "<group>"; };
+		488D7D761E7A788800A182E4 /* pizza1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza1.png; sourceTree = "<group>"; };
+		488D7D771E7A788800A182E4 /* pizza2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza2.png; sourceTree = "<group>"; };
+		488D7D7E1E7A7AE000A182E4 /* Prize-Icon-Pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Prize-Icon-Pizza.png"; sourceTree = "<group>"; };
+		488D7D801E7A7C6D00A182E4 /* Broccoli-Free-PNG-Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Broccoli-Free-PNG-Image.png"; sourceTree = "<group>"; };
+		488D7D821E7A7CB600A182E4 /* bell-peppers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bell-peppers.png"; sourceTree = "<group>"; };
+		488D7D871E7AA0B000A182E4 /* pizza4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza4.png; sourceTree = "<group>"; };
+		488D7D8B1E7B03EC00A182E4 /* pizza-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pizza-3.png"; sourceTree = "<group>"; };
+		488D7D8D1E7B04B100A182E4 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		488D7D8F1E7B06ED00A182E4 /* ThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
+		8CDD483C598D59A786F1FF51 /* Pods_AppLaunch_Pizza.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppLaunch_Pizza.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E030CC6344189D249CC12023 /* Pods-AppLaunch-Pizza.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLaunch-Pizza.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppLaunch-Pizza/Pods-AppLaunch-Pizza.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		488D7D5D1E7A787700A182E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4308FA69AD6A1F632F527DF9 /* Pods_AppLaunch_Pizza.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		488D7D571E7A787700A182E4 = {
+			isa = PBXGroup;
+			children = (
+				488D7D621E7A787700A182E4 /* AppLaunch-Pizza */,
+				488D7D611E7A787700A182E4 /* Products */,
+				ACA486C0BF0D10B196AF5F73 /* Pods */,
+				EA56460C0AA0EBB47DC24F22 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		488D7D611E7A787700A182E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				488D7D601E7A787700A182E4 /* AppLaunch-Pizza.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		488D7D621E7A787700A182E4 /* AppLaunch-Pizza */ = {
+			isa = PBXGroup;
+			children = (
+				488D7D8A1E7B014900A182E4 /* Models */,
+				488D7D891E7B012B00A182E4 /* Controllers */,
+				488D7D7B1E7A788D00A182E4 /* images */,
+				488D7D631E7A787700A182E4 /* AppDelegate.swift */,
+				48385C2A1F36213E00DF1CBD /* FirstController.swift */,
+				488D7D651E7A787700A182E4 /* ViewController.swift */,
+				488D7D671E7A787700A182E4 /* Main.storyboard */,
+				488D7D6A1E7A787700A182E4 /* Assets.xcassets */,
+				488D7D6C1E7A787700A182E4 /* LaunchScreen.storyboard */,
+				488D7D6F1E7A787700A182E4 /* Info.plist */,
+			);
+			path = "AppLaunch-Pizza";
+			sourceTree = "<group>";
+		};
+		488D7D7B1E7A788D00A182E4 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				488D7D8B1E7B03EC00A182E4 /* pizza-3.png */,
+				488D7D751E7A788800A182E4 /* pizza-icon.png */,
+				488D7D761E7A788800A182E4 /* pizza1.png */,
+				488D7D771E7A788800A182E4 /* pizza2.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		488D7D891E7B012B00A182E4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				488D7D871E7AA0B000A182E4 /* pizza4.png */,
+				488D7D821E7A7CB600A182E4 /* bell-peppers.png */,
+				488D7D8D1E7B04B100A182E4 /* CheckoutViewController.swift */,
+				488D7D8F1E7B06ED00A182E4 /* ThemeViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		488D7D8A1E7B014900A182E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				488D7D801E7A7C6D00A182E4 /* Broccoli-Free-PNG-Image.png */,
+				488D7D7E1E7A7AE000A182E4 /* Prize-Icon-Pizza.png */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		ACA486C0BF0D10B196AF5F73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E030CC6344189D249CC12023 /* Pods-AppLaunch-Pizza.debug.xcconfig */,
+				01EA683F6EA15CCCE4512F86 /* Pods-AppLaunch-Pizza.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA56460C0AA0EBB47DC24F22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CDD483C598D59A786F1FF51 /* Pods_AppLaunch_Pizza.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		488D7D5F1E7A787700A182E4 /* AppLaunch-Pizza */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 488D7D721E7A787700A182E4 /* Build configuration list for PBXNativeTarget "AppLaunch-Pizza" */;
+			buildPhases = (
+				91025DA63407429F24C98C97 /* [CP] Check Pods Manifest.lock */,
+				488D7D5C1E7A787700A182E4 /* Sources */,
+				488D7D5D1E7A787700A182E4 /* Frameworks */,
+				488D7D5E1E7A787700A182E4 /* Resources */,
+				489F9BFF1F7684E400B4D1B8 /* Embed Frameworks */,
+				FCD3A018C2FFE6562C84A703 /* [CP] Embed Pods Frameworks */,
+				2C8FAD41A346407E01C3C0FD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AppLaunch-Pizza";
+			productName = "Engage-Pizza";
+			productReference = 488D7D601E7A787700A182E4 /* AppLaunch-Pizza.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		488D7D581E7A787700A182E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Chethan Kumar";
+				TargetAttributes = {
+					488D7D5F1E7A787700A182E4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 488D7D5B1E7A787700A182E4 /* Build configuration list for PBXProject "AppLaunch-Pizza" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 488D7D571E7A787700A182E4;
+			productRefGroup = 488D7D611E7A787700A182E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				488D7D5F1E7A787700A182E4 /* AppLaunch-Pizza */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		488D7D5E1E7A787700A182E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				488D7D6E1E7A787700A182E4 /* LaunchScreen.storyboard in Resources */,
+				488D7D7A1E7A788800A182E4 /* pizza2.png in Resources */,
+				488D7D781E7A788800A182E4 /* pizza-icon.png in Resources */,
+				488D7D881E7AA0B000A182E4 /* pizza4.png in Resources */,
+				488D7D6B1E7A787700A182E4 /* Assets.xcassets in Resources */,
+				488D7D811E7A7C6D00A182E4 /* Broccoli-Free-PNG-Image.png in Resources */,
+				488D7D791E7A788800A182E4 /* pizza1.png in Resources */,
+				488D7D831E7A7CB600A182E4 /* bell-peppers.png in Resources */,
+				488D7D8C1E7B03EC00A182E4 /* pizza-3.png in Resources */,
+				488D7D691E7A787700A182E4 /* Main.storyboard in Resources */,
+				488D7D7F1E7A7AE000A182E4 /* Prize-Icon-Pizza.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C8FAD41A346407E01C3C0FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppLaunch-Pizza/Pods-AppLaunch-Pizza-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91025DA63407429F24C98C97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppLaunch-Pizza-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCD3A018C2FFE6562C84A703 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AppLaunch-Pizza/Pods-AppLaunch-Pizza-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI/BMSAnalyticsAPI.framework",
+				"${BUILT_PRODUCTS_DIR}/BMSCore/BMSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/BMSPush/BMSPush.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMAppLaunch/IBMAppLaunch.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSPush.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBMAppLaunch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppLaunch-Pizza/Pods-AppLaunch-Pizza-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		488D7D5C1E7A787700A182E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				488D7D661E7A787700A182E4 /* ViewController.swift in Sources */,
+				488D7D8E1E7B04B100A182E4 /* CheckoutViewController.swift in Sources */,
+				48385C2B1F36213E00DF1CBD /* FirstController.swift in Sources */,
+				488D7D901E7B06ED00A182E4 /* ThemeViewController.swift in Sources */,
+				488D7D641E7A787700A182E4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		488D7D671E7A787700A182E4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				488D7D681E7A787700A182E4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		488D7D6C1E7A787700A182E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				488D7D6D1E7A787700A182E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		488D7D701E7A787700A182E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		488D7D711E7A787700A182E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		488D7D731E7A787700A182E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E030CC6344189D249CC12023 /* Pods-AppLaunch-Pizza.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "AppLaunch-Pizza/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.applaunch-pizza";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		488D7D741E7A787700A182E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01EA683F6EA15CCCE4512F86 /* Pods-AppLaunch-Pizza.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "AppLaunch-Pizza/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.applaunch-pizza";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		488D7D5B1E7A787700A182E4 /* Build configuration list for PBXProject "AppLaunch-Pizza" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				488D7D701E7A787700A182E4 /* Debug */,
+				488D7D711E7A787700A182E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		488D7D721E7A787700A182E4 /* Build configuration list for PBXNativeTarget "AppLaunch-Pizza" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				488D7D731E7A787700A182E4 /* Debug */,
+				488D7D741E7A787700A182E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 488D7D581E7A787700A182E4 /* Project object */;
+}
