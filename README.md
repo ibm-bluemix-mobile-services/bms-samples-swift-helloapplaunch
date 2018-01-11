@@ -13,6 +13,6 @@ A sample application to demonstrate capabilities of IBM Cloud AppLaunch Service.
 
 3. Update the feature, property and metric codes in `ViewController.swift` file
 
-4. Run the application in the iOS Simulator or physical device and test the feature/InApp Engagement Behviour.
+4. Run the application in the iOS Simulator or physical device and test the feature/InApp Engagement Behaviour.
  
 > **Tip:** you can update the bundled SDK by running the command `pod update` from the project's root folder.
