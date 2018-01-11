@@ -1,7 +1,7 @@
 IBM Cloud Mobile Service
 ===
 ## AppLaunch Pizza
-A sample application demonstrating capabilities of IBM Cloud AppLaunch Service.
+A sample application to demonstrate capabilities of IBM Cloud AppLaunch Service.
 
 
 ### Usage
