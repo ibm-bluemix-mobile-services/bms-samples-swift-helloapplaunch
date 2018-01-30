@@ -4,7 +4,7 @@ PODS:
     - BMSAnalyticsAPI (~> 2.2)
   - BMSPush (2.0.3):
     - BMSCore (~> 2.0)
-  - IBMAppLaunch (1.0.7):
+  - IBMAppLaunch (1.1.2):
     - BMSCore (~> 2.0)
     - SwiftyJSON (~> 4.0.0)
   - SwiftyJSON (4.0.0)
@@ -19,7 +19,7 @@ SPEC CHECKSUMS:
   BMSAnalyticsAPI: d259379069bb11d2ff365bf5b796a2677dfc3849
   BMSCore: 446c16a7dbe14b5019751617a00dd947c65cca82
   BMSPush: 990f376e84260ab3cf7637ba8be05db493f90256
-  IBMAppLaunch: 52822a699df1d6ef7075380084181eb89149b7ee
+  IBMAppLaunch: 5b0d288df9bc47bcd087e4fbfcdd1f6b5d43f9fe
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
 PODFILE CHECKSUM: 45a6e8d159eaff9ebd2d287c17f6d4d2c72d5210
