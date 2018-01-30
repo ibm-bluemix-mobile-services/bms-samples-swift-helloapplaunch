@@ -12,32 +12,42 @@ import IBMAppLaunch
 
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var touchIdButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-       
-        super.viewDidAppear(animated)
         
-        if(AppLaunch.sharedInstance.isFeatureEnabled(featureCode: "_1o2xw6uds")){
-
-            let label:String = AppLaunch.sharedInstance.getPropertyofFeature(featureCode: "_1o2xw6uds", propertyCode: "_2zyawutfc")
-
-            DispatchQueue.main.async() {
-                self.touchIdButton.isHidden = false
-                self.touchIdButton.setTitle(label, for: UIControlState.normal)
+        super.viewDidAppear(animated)
+        do {
+            if(try AppLaunch.sharedInstance.isFeatureEnabled(featureCode: "_1o2xw6uds")){
+                
+                let label:String = try AppLaunch.sharedInstance.getPropertyofFeature(featureCode: "_1o2xw6uds", propertyCode: "_2zyawutfc")
+                
+                DispatchQueue.main.async() {
+                    self.touchIdButton.isHidden = false
+                    self.touchIdButton.setTitle(label, for: UIControlState.normal)
+                }
             }
+        } catch AppLaunchError.applaunchNotIntialized {
+            print("AppLaunch Serivce is not intialized")
+        } catch {
+            print ("Error : ", error.localizedDescription)
         }
+        
     }
     
     @IBAction func touchid(_ sender: Any) {
-        var metriccodes = [String]()
-        metriccodes.append("_w6ll8y166")
-        AppLaunch.sharedInstance.sendMetrics(codes: metriccodes)
-        
+        do {
+            try AppLaunch.sharedInstance.sendMetrics(codes: ["_w6ll8y166"])
+        }
+        catch AppLaunchError.applaunchNotIntialized {
+            print("AppLaunch Serivce is not intialized")
+        } catch {
+            print ("Error : ", error.localizedDescription)
+        }
     }
     
     
@@ -107,7 +117,7 @@ class ViewController: UIViewController {
     @IBAction func checkout(_ sender: Any) {
         showAlertWithTitle(title: "Chekout Success", message: "Your pizza will arrive in less than 30 mins")
     }
-
+    
     @IBAction func regularCheckout(_ sender: Any) {
         showAlertWithTitle(title: "Regular checkout", message: "Your boring regular checkout")
     }
@@ -116,7 +126,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 

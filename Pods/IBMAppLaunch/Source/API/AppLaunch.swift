@@ -34,19 +34,21 @@ public class AppLaunch: NSObject {
     
     private var LogTimer: Timer!
     
+    private var ActionRefreshTimer: Timer!
+    
     // MARK: Methods
     
     /**
-     The required initializer for the `AppLaunch` class.
+     The required initializer for the `AppLaunch` SDK.
      
-     This method will intialize the AppLaunch with appID, clientSecret and region based registration.
+     This method will intialize the AppLaunch with credentials, user and configuration details.
      
      - parameter region: IBM Cloud region suffix specifies the location where the AppLaunch service is hosted
-     - parameter applicationId: app GUID value
+     - parameter appId: app GUID value
      - parameter clientSecret: appLaunch client secret value
      - parameter config: appLaunch client configuration object
      - parameter user: appLaunch client user object
-     - parameter completionHandler: A completion-handler callback function. In the case of a successful intialization, the actions JSON is returned in the AppLaunchResponse. In the case of a unsuccessful completion, the error code and the information is returned in the AppLaunchFailResponse
+     - parameter completionHandler: `AppLaunchCompletionHandler` callback function. In the case of a successful intialization, the engagements JSON is returned in the `AppLaunchResponse`. In the case of a unsuccessful completion, the error code and the information is returned in the `AppLaunchFailResponse`
      */
     public func initialize(region: ICRegion, appId: String, clientSecret: String, config: AppLaunchConfig, user: AppLaunchUser, completionHandler: @escaping AppLaunchCompletionHandler) {
         
@@ -72,12 +74,12 @@ public class AppLaunch: NSObject {
     
     
     /**
-     This Methode used to unregister the device from the IBM Cloud AppLaunch service and It clears the stored cache.
+     This Methode clears the stored service information and unregisters the device from the IBM Cloud AppLaunch service.
      
-     - parameter completionHandler: A completion-handler callback function. In the case of a successful completion, the success information is returned in the AppLaunchResponse. In the case of a unsuccessful completion, the error information is returned in the AppLaunchFailResponse
+     - parameter completionHandler: `AppLaunchCompletionHandler` callback function. In the case of a successful completion, the success information is returned in the `AppLaunchResponse`. In the case of a unsuccessful completion, the error information is returned in the `AppLaunchFailResponse`
      */
     public func destroy(completionHandler: @escaping AppLaunchCompletionHandler) {
-        if(isInitialized) {
+        if(isInitialized && isUserRegistered) {
             let request = AppLaunchInvoker(url: URLBuilder!.getUserURL(), method: HttpMethod.DELETE, timeout: 60)
             request.addHeader(config.getClientSecret(), CLIENT_SECRET)
             request.setCompletionHandler({(response,error) in
@@ -111,8 +113,10 @@ public class AppLaunch: NSObject {
      This Methode used to send metrics information to the IBM Cloud AppLaunch service.
      
      - Parameter code: This is the array of metric codes.
+     
+     - Throws: `AppLaunchError.applaunchNotIntialized` error if applaunch service is not initialized
      */
-    public func sendMetrics(codes: [String]) -> Void {
+    public func sendMetrics(codes: [String]) throws {
         if(!AppLaunchUtils.userNeedsToBeRegistered() && isInitialized){
             var metricsData:JSON = JSON()
             metricsData[METRIC_CODES].arrayObject = codes
@@ -123,7 +127,7 @@ public class AppLaunch: NSObject {
             request.setCompletionHandler({(response,error) in
                 
                 let status = response?.statusCode ?? 0
-                if(status == 200){
+                if(status == 202){
                     print("sent metrics successfully for the code(s) : \(codes.joined(separator: ", "))")
                 }else if let responseError = error{
                     print("Error in sending metrics for the code(s) : \(codes.joined(separator: ", ")) with error :\(responseError.localizedDescription)")
@@ -132,46 +136,69 @@ public class AppLaunch: NSObject {
             })
             request.execute()
         }else{
-            print(MSG__ERR_NOT_INIT)
+            throw AppLaunchError.applaunchNotIntialized
         }
-        
     }
+    
+    /**
+     Displays inApp Message if there is any present
+     
+     - Throws: `AppLaunchError.applaunchNotIntialized` error if applaunch service is not initialized
+     */
+    public func displayInAppMessages() throws {
+        if(!AppLaunchUtils.userNeedsToBeRegistered() && isInitialized){
+            self.processInAppActions()
+        } else {
+            throw AppLaunchError.applaunchNotIntialized
+        }
+    }
+    
     
     /**
      Checks if the feature is enabled for the app
      
-     - returns
-     Bool value
+     - returns: Bool value
+     
+     - Throws: `AppLaunchError.applaunchNotIntialized` error if applaunch service is not initialized
      */
-    public func isFeatureEnabled(featureCode: String) -> Bool{
-        if(AppLaunchCacheManager.sharedInstance.readJSON(featureCode) != JSON.null) {
-            return true
+    public func isFeatureEnabled(featureCode: String) throws -> Bool{
+        if(!AppLaunchUtils.userNeedsToBeRegistered() && isInitialized){
+            if(AppLaunchCacheManager.sharedInstance.readAction(featureCode) != JSON.null) {
+                return true
+            }
+            return false
+        } else {
+            throw AppLaunchError.applaunchNotIntialized
         }
-        return false
     }
     
     /**
      Returns the value for particular property in a feature
      
-     - returns
-     String value of the property or Empty string if property/feature doesn't exist
+     - returns: String value of the property or Empty string if property/feature doesn't exist
      
      - parameters:
      - featureCode: feature code
      - propertyCode: property code
+     
+     - Throws: `AppLaunchError.applaunchNotIntialized` erorr if applaunch service is not initialized
      */
-    public func getPropertyofFeature(featureCode: String , propertyCode: String) -> String{
-        let feature = AppLaunchCacheManager.sharedInstance.readJSON(featureCode)
-        if (feature != JSON.null) {
-            for(_,property) in feature[PROPERTIES]{
-                if let propertyCode = property[CODE].string{
-                    if propertyCode == propertyCode{
-                        return property[VALUE].stringValue
+    public func getPropertyofFeature(featureCode: String , propertyCode: String) throws -> String {
+        if(!AppLaunchUtils.userNeedsToBeRegistered() && isInitialized){
+            let feature = AppLaunchCacheManager.sharedInstance.readAction(featureCode)
+            if (feature != JSON.null) {
+                for(_,property) in feature[PROPERTIES]{
+                    if let propertyCode = property[CODE].string{
+                        if propertyCode == propertyCode{
+                            return property[VALUE].stringValue
+                        }
                     }
                 }
             }
+            return "" }
+        else {
+            throw AppLaunchError.applaunchNotIntialized
         }
-        return ""
     }
     
     
@@ -194,28 +221,30 @@ public class AppLaunch: NSObject {
             getActions(completionHandler)
         } else {
             var method:HttpMethod = HttpMethod.POST
+            var requestURL:String = URLBuilder!.getAppRegistrationURL()
+            var registrationData:JSON = AppLaunchUtils.getRegistrationData(user, config)
             if AppLaunchUtils.isUpdateRegistrationRequired(user, config) {
                 // Update Registration Call
                 method = HttpMethod.PUT
+                requestURL = URLBuilder!.getUserURL()
+                registrationData = AppLaunchUtils.getUpdateRegistrationData(user, config)
             }
-            let registrationData:JSON = AppLaunchUtils.getRegistrationData(user, config)
-            let request = AppLaunchInvoker(url: URLBuilder!.getAppRegistrationURL(), method: method, timeout: 60)
+            let request = AppLaunchInvoker(url: requestURL, method: method, timeout: 60)
             request.addHeader(APPLICATION_JSON, CONTENT_TYPE)
             request.addHeader(config.getClientSecret(), CLIENT_SECRET)
             request.setJSONRequestBody(registrationData)
             request.setCompletionHandler({(response,error) in
                 let status = response?.statusCode ?? 0
                 if(response != nil){
-                    if(status == 200 || status == 201 || status == 202 || status == 405){
+                    if(status == 202){
                         // Registration Success. Save User Context and proceed with getActions Call
+                        self.isUserRegistered = true
                         Analytics.userIdentity = self.user.getUserId()
                         AppLaunchUtils.saveUserContext(self.user, self.config)
                         self.getActions(completionHandler)
                     }else{
-                        if (status == 400) {
-                            self.isUserRegistered = false
-                            AppLaunchCacheManager.sharedInstance.clearUserDefaults()
-                        }
+                        self.isUserRegistered = false
+                        AppLaunchCacheManager.sharedInstance.clearUserDefaults()
                         completionHandler(nil, AppLaunchFailResponse(.REGISTRATION_FAILURE ,  (response?.responseText)!))
                     }
                 }else {
@@ -229,28 +258,28 @@ public class AppLaunch: NSObject {
     private func getActions(_ completionHandler: @escaping AppLaunchCompletionHandler) {
         let policy = config.getPolicy()
         switch(policy) {
-        case .REFRESH_ON_EVERY_START : fetchActions(completionHandler)
+        case .REFRESH_ON_EVERY_START : refreshActions(completionHandler)
             break
         case .REFRESH_ON_EXPIRY : let expirationTimeString = AppLaunchCacheManager.sharedInstance.readString(CACHE_EXPIRATION).isEmpty ? "0" : AppLaunchCacheManager.sharedInstance.readString(CACHE_EXPIRATION)
         let expirationTime = Int(expirationTimeString)!
         let currentTime = AppLaunchUtils.getCurrentDateAndTime()
         if expirationTime < currentTime {
-            fetchActions(completionHandler)
+            refreshActions(completionHandler)
         } else {
             if (AppLaunchCacheManager.sharedInstance.readJSON(ACTION) != JSON.null) {
                 completionHandler(AppLaunchResponse(AppLaunchCacheManager.sharedInstance.readJSON(ACTION)), nil)
             } else {
-                fetchActions(completionHandler)
+                refreshActions(completionHandler)
             }
         }
             break
         case .BACKGROUND_REFRESH :
-            // TODO :  Background Refresh Mechanism
-            fetchActions(completionHandler)
+            ActionRefreshTimer = Timer.scheduledTimer(timeInterval: TimeInterval(config.getCacheExpiration() * 60),
+                                                      target:self, selector:#selector(self.fetchAction),
+                                                      userInfo:nil,
+                                                      repeats:true)
             break
         }
-        // Display InApp Messages
-        NotificationCenter.default.addObserver(self, selector: #selector(self.processInAppActions), name: .UIApplicationDidBecomeActive, object: nil)
     }
     
     
@@ -260,7 +289,7 @@ public class AppLaunch: NSObject {
      
      - returns: AppLaunchCompletionHandler: A completion-handler callback function. In the case of a successful completion, the actions information is returned in the AppLaunchResponse. In the case of a unsuccessful completion, the error information is returned in the AppLaunchFailResponse
      */
-    private func fetchActions(_ completionHandler: @escaping AppLaunchCompletionHandler){
+    private func refreshActions(_ completionHandler: @escaping AppLaunchCompletionHandler){
         let request = AppLaunchInvoker(url: (URLBuilder?.getActionURL())!, method: HttpMethod.GET, timeout: 60)
         request.addHeader(config.getClientSecret() , CLIENT_SECRET)
         request.setCompletionHandler({ (response, error) in
@@ -268,13 +297,14 @@ public class AppLaunch: NSObject {
                 let status = response?.statusCode ?? 0
                 let responseText = response?.responseText ?? ""
                 
-                if(status == 200 || status == 201){
+                if(status == 200){
                     if let data = responseText.data(using: String.Encoding.utf8) {
                         do {
                             let respJson = try JSON(data: data)
                             let ExpirationTime = String(Int(AppLaunchUtils.getCurrentDateAndTime()) + Int(self.config.getCacheExpiration() * 60))
                             AppLaunchCacheManager.sharedInstance.addString(ExpirationTime, CACHE_EXPIRATION)
                             AppLaunchCacheManager.sharedInstance.addString(respJson.rawString()!, ACTION)
+                            AppLaunchCacheManager.sharedInstance.clearActions()
                             AppLaunchCacheManager.sharedInstance.addActions(respJson[FEATURES])
                             AppLaunchCacheManager.sharedInstance.addInAppActionToCache(respJson[INAPP])
                             completionHandler(AppLaunchResponse(respJson), nil)
@@ -291,6 +321,16 @@ public class AppLaunch: NSObject {
             }
         })
         request.execute()
+    }
+    
+    @objc private func fetchAction() {
+        refreshActions { (success, failure) in
+            if (success != nil) {
+                print("Action Refresh Successful: " + (success?.getResponseJSON().rawString())!)
+            } else {
+                print("Action Refresh Failure: " + (failure?.getErrorMessage())!)
+            }
+        }
     }
     
     private func displayInAppMessage(_ action: JSON) -> Void {
@@ -342,7 +382,6 @@ public class AppLaunch: NSObject {
                 }
             }
         }
-        NotificationCenter.default.removeObserver(self, name: .UIApplicationDidBecomeActive, object: nil)
     }
     
     private func IntializeSession() {
